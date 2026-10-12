@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashie's beauty parlor</title>
+<link rel="stylesheet" href="index.css">  
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">✨ ashie's beauty parlor</div>
+      <ul class="nav-links">
+        <li><a class="nav-btn active" onclick="showPage('home-page', this)">Home</a></li>
+        <li><a class="nav-btn" onclick="showPage('services-page', this)">Services</a></li>
+        <li><a class="nav-btn" onclick="showPage('gallery-page', this)">Gallery</a></li>
+        <li><a class="nav-btn" onclick="showPage('booking-page', this)">Book Now</a></li>
+        <li><a class="nav-btn" onclick="showPage('contact-page', this)">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HOME PAGE -->
+  <section id="home-page" class="page-section active">
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Enhance Your Natural Beauty</h1>
+        <p>your beauty , our identity. Visit ashie's Beauty Parlor for world-class bridal makeup, hair styling, skin treatments, and relaxing spa packages.</p>
+        <button class="btn" onclick="heroBookAppointment()">Book Appointment Now</button>
+      </div>
+      <div class="hero-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ5bChFnQPSUUU63XhVLxXcVj8ocdim1qbpZrSlqBJqQ&s=10" alt="Beauty Salon">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PAGE -->
+  <section id="services-page" class="page-section">
+    <h2 class="section-title">Our Exclusive Services</h2>
+    <p class="section-subtitle">choose you favourite package and give yourself a beautiful new look.</p>
+    
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <img src="data:image/jpeg;base64,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" alt="Bridal Makeup">
+        <h3>Bridal & Party Makeup</h3>
+        <p>HD Bridal Makeup, Engagement & Reception Look with premium international products.</p>
+        <div class="price">Rs. 15,000</div>
+        <button class="btn" onclick="bookServiceAlert('Bridal & Party Makeup')">Book Now</button>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeiWqVpTzs_MvKD3hrror4pkd7q0cRR3CgXadYpqAmng&s=10" alt="Hair Styling">
+        <h3>Hair Care & Styling</h3>
+        <p>Hair Rebonding, Keratin Treatment, Trendy Haircuts & Dyeing.</p>
+        <div class="price">Rs. 5,000</div>
+        <button class="btn" onclick="bookServiceAlert('Hair Care & Styling')">Book Now</button>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2l6N1KimbgqrkeRb6FYPFMXXD33DEC7FD4YKUoHHRug&s=10" alt="Facial Care">
+        <h3>Glow Facial & Skincare</h3>
+        <p>Hydra Facial, Organic Glow Facial, and deep cleansing skin treatments.</p>
+        <div class="price">Rs. 3,500</div>
+        <button class="btn" onclick="bookServiceAlert('Glow Facial & Skincare')">Book Now</button>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsTbSz5HM0LtQmSYnI0oRC4a_nieN2w9_QvdwteA1aJQ&s=10" alt="Nail Art">
+        <h3>Manicure & Pedicure</h3>
+        <p>Relaxing Spa Mani-Pedi along with trendy Nail Art and Extensions.</p>
+        <div class="price">Rs. 2,500</div>
+        <button class="btn" onclick="bookServiceAlert('Manicure & Pedicure')">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY PAGE -->
+  <section id="gallery-page" class="page-section">
+    <h2 class="section-title">Our Work Gallery</h2>
+    <p class="section-subtitle">beautifull moments with our happy clients and our stunning work</p>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf1q_9tQWfqFCrDtpCWJkP1YauRsvASLI-SvKOhX7KNg&s=10" alt="Work 1">
+      </div>
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs80sfRguBar-3mRUbsoqDWKPBnfuFFmMzZsedHvBP7A&s=10" alt="Work 2">
+      </div>
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfg0GAnwtnN3QGSWUSDS81SJ0To5ar1fOGSFPAjqpWw&s=10" alt="Work 3">
+      </div>
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0r7W02S-cT6MmB7ktohyBDubtQ2yfG0h4FbQaPNejRg&s=10" alt="Work 4">
+      </div>
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEax61j3SXtdEq0xOoSz4uccecFuUS9btywcmzylTCBw&s=10" alt="Work 5">
+      </div>
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd21xVwEOUbrrWCiojL5bVzRySUnK0F8z-2K1pGcT6AQ&s=10"alt="Work 6">
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING PAGE -->
+  <section id="booking-page" class="page-section">
+    <h2 class="section-title">Book An Appointment</h2>
+    <p class="section-subtitle">please confirm your timing and save time</p>
+
+    <div class="booking-container">
+      <form id="appointmentForm" onsubmit="handleConfirmBooking(event)">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="enter your Name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="03xx-xxxxxxx" required>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Select Service</label>
+          <select id="service" required>
+            <option value="">Select Service</option>
+            <option value="Bridal & Party Makeup">Bridal & Party Makeup</option>
+            <option value="Hair Care & Styling">Hair Care & Styling</option>
+            <option value="Glow Facial & Skincare">Glow Facial & Skincare</option>
+            <option value="Manicure & Pedicure">Manicure & Pedicure</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Appointment Date</label>
+          <input type="date" id="date" required>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%;">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT PAGE -->
+  <section id="contact-page" class="page-section">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-subtitle">contact us or visit our parlor</p>
+
+    <div class="contact-info">
+      <div class="contact-card">
+        <h3>📍 Location</h3>
+        <p>Main Market Road, Near City Center, Pakistan</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>📞 Phone / WhatsApp</h3>
+        <p>0301-xxxxxxx</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>⏰ Timings</h3>
+        <p>Monday - Sunday: 11:00 AM - 09:00 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 ashie's Beauty Parlor. All rights reserved.</p>
+  </footer>
+
+  
+  <script src="index.js"></script>
+</body>
+</html>
